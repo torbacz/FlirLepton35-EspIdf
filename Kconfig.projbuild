@@ -1,0 +1,59 @@
+menu "Lepton Configuration"
+
+	config LEPTON_SDA_PIN
+		int "SDA pin"
+		range 0 50
+		default 3
+		help
+			The SDL pin for I2C connection.
+
+	config LEPTON_SCL_PIN
+		int "SCL pin"
+		range 0 50
+		default 4
+		help
+			The SCL pin for I2C connection.
+
+	config LEPTON_POWER_PIN
+		int "Power pin"
+		range 0 50
+		default 10
+		help
+			The power pin for camera.
+
+	config LEPTON_RESTART_TIME
+		int "Restart time"
+		range 0 10000
+		default 6000
+		help
+			Restart time when restarting via power pin.
+
+	config LEPTON_MOSI_PIN
+		int "MOSI pin"
+		range 0 50
+		default 4
+		help
+			The MOSI pin for VoSPI connection.
+
+	config LEPTON_MISO_PIN
+		int "MISO pin"
+		range 0 50
+		default 4
+		help
+			The MISO pin for VoSPI connection.
+
+	config LEPTON_CLK_PIN
+		int "Clock pin"
+		range 0 50
+		default 4
+		help
+			The CLK pin for VoSPI connection.
+
+	config LEPTON_CS_PIN
+		int "CS pin"
+		range 0 50
+		default 4
+		help
+			The CS pin for VoSPI connection.
+
+endmenu
