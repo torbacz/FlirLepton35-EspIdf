@@ -13,11 +13,12 @@
 #include "include/vospi.h"
 #include "include/shared_frame.h"
 
+#define RestartTime 500
+
 static const char *TAG = "VoSPITask";
 
 static bool CameraInitialized = false;
 static uint8_t GpioPowerPin = 0;
-static uint16_t RestartTime = 0;
 
 void SetupPowerReboot(uint8_t gpioPowerPin)
 {
@@ -45,7 +46,6 @@ void InitCamera(uint8_t gpioPowerPin, uint16_t restartTime, uint8_t GpioMosiPin,
   ESP_LOGI(TAG, "Starting camera initialisation...");
   SetupPowerReboot(gpioPowerPin);
   vospi_init(GpioMosiPin, GpioMisoPin, GpioClkPin, GpioCsPin);
-  RestartTime = restartTime;
 
   CameraInitialized = true;
 }
