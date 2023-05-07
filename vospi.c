@@ -135,7 +135,7 @@ int sync_and_transfer_frame(vospi_frame_t* frame)
           packet_20_num,
           frame->segments[0].packets[20].id
         );
-        vTaskDelay(200 / portTICK_RATE_MS);
+        vTaskDelay(200 / portTICK_PERIOD_MS);
 
         if (++resets >= VOSPI_MAX_SYNC_RESETS) {
           ESP_LOGE(TAG, "too many resets while synchronising (%d)", resets);

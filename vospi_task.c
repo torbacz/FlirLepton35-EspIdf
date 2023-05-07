@@ -22,7 +22,7 @@ static uint8_t GpioPowerPin = 0;
 
 void SetupPowerReboot(uint8_t gpioPowerPin)
 {
-  gpio_pad_select_gpio(gpioPowerPin);
+  esp_rom_gpio_pad_select_gpio(gpioPowerPin);
   gpio_set_direction(gpioPowerPin, GPIO_MODE_OUTPUT);
   GpioPowerPin = gpioPowerPin;
 }
