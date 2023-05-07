@@ -31,28 +31,28 @@ menu "Lepton Configuration"
 	config LEPTON_MOSI_PIN
 		int "MOSI pin"
 		range 0 50
-		default 4
+		default 35
 		help
 			The MOSI pin for VoSPI connection.
 
 	config LEPTON_MISO_PIN
 		int "MISO pin"
 		range 0 50
-		default 4
+		default 37
 		help
 			The MISO pin for VoSPI connection.
 
 	config LEPTON_CLK_PIN
 		int "Clock pin"
 		range 0 50
-		default 4
+		default 36
 		help
 			The CLK pin for VoSPI connection.
 
 	config LEPTON_CS_PIN
 		int "CS pin"
 		range 0 50
-		default 4
+		default 8
 		help
 			The CS pin for VoSPI connection.
 
