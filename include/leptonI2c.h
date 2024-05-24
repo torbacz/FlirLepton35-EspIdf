@@ -1,7 +1,6 @@
 #include "driver/i2c.h"
 #include "esp_system.h"
 #include "esp_log.h"
-#include "config.h"
 
 #define LEP_I2C_DEVICE_ADDRESS (uint8_t)0x2A
 
